@@ -1,0 +1,29 @@
+# Core
+numpy>=1.24
+scipy>=1.10
+
+# Deep learning
+torch>=2.1
+torchvision
+
+# HuggingFace stack
+transformers>=4.46.0,<4.48
+datasets>=2.21.0
+accelerate>=0.34.0
+peft>=0.10
+
+# TRL (GRPO trainer)
+trl==0.14.0
+
+# Experiment tracking
+wandb>=0.16
+
+# Model serving / inference
+vllm>=0.4.0
+
+# Utilities
+tqdm
+pyyaml
+jsonlines
+sentencepiece
+protobuf

@@ -1,0 +1,25 @@
+# CDPO training configuration
+# Usage: python training/train.py --method cdpo (reads defaults below)
+
+method: cdpo
+model:  Qwen/Qwen2.5-7B-Instruct
+
+# Training
+num_generations: 8       # G — rollouts per prompt
+batch_size:      4       # prompts per batch (effective = 4×8 = 32)
+max_steps:       400
+lr:              1e-6
+max_new_tokens:  1024
+seed:            42
+
+# CDPO-specific
+alpha_schedule:  adaptive   # "adaptive" | "fixed" | "annealing"
+beta_minus:      2.0         # asymmetric penalty for constraint violation
+
+# Paths
+data_dir:   data/full
+desc_dir:   data/full
+output_dir: outputs
+
+# W&B
+wandb_project: cdpo-financial

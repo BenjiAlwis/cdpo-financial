@@ -1,0 +1,13 @@
+# GRPO baseline configuration
+method: grpo
+model:  Qwen/Qwen2.5-7B-Instruct
+num_generations: 8
+batch_size:      4
+max_steps:       400
+lr:              1e-6
+max_new_tokens:  1024
+seed:            42
+data_dir:   data/full
+desc_dir:   data/full
+output_dir: outputs
+wandb_project: cdpo-financial
